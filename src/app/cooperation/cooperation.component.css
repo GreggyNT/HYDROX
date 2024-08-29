@@ -1,0 +1,58 @@
+h2{
+    display: flex;
+    justify-content: center;
+    font-weight: 100;
+    font-size: 1.8vw;
+}
+.about{
+    font-size: 1.6vw;
+    width: 40%;
+    line-height: 4.5vh;
+}
+.usage{
+    display: flex;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 7vh;
+}
+.text-container {
+    align-items: center;
+    position: relative;
+    font-size: 2vh;
+    justify-self: space-around;
+    padding: 0 10px; /* Space between lines and text */
+    margin-bottom:11vh;
+
+}
+.text-container::before,
+.text-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 13vw; /* Length of the line */
+    height: 1px; /* Thickness of the line */
+    background-color: black ;/* Color of the line */
+    transform: translateY(-50%);
+}
+.text-container::before {
+    left: 0;
+}
+.text-container::after {
+    right: 0;
+}
+.word {
+    margin-right: 10px; /* Space between words */
+}
+.word:first-child{
+    margin-left:13.5vw
+}
+.word:not(:last-child)::after {
+    content: '';
+    display: inline-block;
+    width: 100px; /* Length of the line */
+    height: 1px; /* Thickness of the line */
+    background-color:black; /* Color of the line */
+    margin-left: 9px; /* Space between word and line */
+    vertical-align: middle;
+}

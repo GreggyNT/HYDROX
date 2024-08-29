@@ -1,0 +1,56 @@
+.buttons-container{
+    --text-color:black;
+    --back-color:white;
+}
+
+.buttons-container.black{
+    --text-color:white;
+    --back-color:black;
+}
+ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+    height: 10vh;
+    margin-left:11.1%;
+}
+.buttons-container{
+    background-color: var(--back-color);
+}
+ul li a{
+    color:var(--text-color);
+}
+
+img{
+    height: 1.5vw;
+}
+header{
+    min-height: 30px;
+}
+.buttons{
+    margin-top: 0;
+    
+}
+
+a{
+    color:black;
+    font-size: 1.2vw;
+}
+.logo{
+        max-width: 100%;
+        height: 3vw;
+        margin-left: 32.5%;
+        min-height: 51px;
+}
+.lupaPin{
+    margin-left:1%;
+}
+a:hover{
+    color:#bf0404;
+}
+.currency{
+    margin-right: 13%;
+}

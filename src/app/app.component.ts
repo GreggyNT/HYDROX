@@ -1,13 +1,70 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { AfterViewInit, Component, EventEmitter, Output } from '@angular/core';
+import { CubeComponent } from './cube/cube.component';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { HeaderComponent } from "./header/header.component";
+import { BodyComponent } from './body/body.component';
+import { OnInit } from '@angular/core';
+import { ContactsComponent } from './contacts/contacts.component';
+import { Subscription } from 'rxjs';
+import { ThemeCheckerService } from './theme-checker.service';
+import { BrowserAnimationsModule} from  '@angular/platform-browser/animations';
+import { fadeAnimation } from './animations/routeAnimations';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HeaderComponent,BodyComponent,CubeComponent,RouterLink,RouterLinkActive],
+  animations:[fadeAnimation],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  theme:boolean;
+  constructor(private themeChecker:ThemeCheckerService){
+   
+  }
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
+  themeToggleSubscription: Subscription;
+  ngOnInit(): void {
+    this.themeChecker.themeToggled.next(true);
+    this.toggleDarkTheme();
+  }
   title = 'HYDROX';
+  lupaSrc :string;
+  cartSrc  :string;
+  lightSrc :string;
+  static togglebleElements = ["header",""]; 
+  toggleDarkTheme(): void {
+
+    this.themeChecker.themeToggled.next(!this.themeChecker.themeToggled.getValue());
+    document.body.getElementsByTagName("app-root").item(0)?.classList.toggle("black");
+    document.body.getElementsByClassName("buttons-container").item(0)?.classList.toggle("black");
+    document.body.getElementsByClassName("background").item(0)?.classList.toggle("black");
+    document.body.getElementsByClassName("background2").item(0)?.classList.toggle("black");
+
+    if(this.themeChecker.themeToggled.getValue()){
+      this.lupaSrc = "../../assets/icons/Search.png";
+      this.cartSrc = "../../assets/icons/Shopping-black.png";
+      this.lightSrc = "../../assets/icons/Dome-lightdark.png";
+    }
+    else{
+      this.lupaSrc = "../../assets/icons/Search-white.png";
+      this.cartSrc = "../../assets/icons/Shopping-white.png";
+      this.lightSrc = "../../assets/icons/Dome-light.png";
+    }
+
+ }
+
+ onOutletLoaded(component:BodyComponent|ContactsComponent){
+    if (component instanceof BodyComponent){
+      if(!this.themeChecker.themeToggled.getValue())
+      {
+        document.body.getElementsByClassName("background").item(0)?.classList.toggle("black");
+        document.body.getElementsByClassName("background2").item(0)?.classList.toggle("black");
+      }
+    }
+ }
 }

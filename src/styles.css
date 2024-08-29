@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+
+}
+
+a{
+    text-decoration: none;
+}
+app-root {
+    --text-color: black;
+    --bkg-color: white;
+  }
+app-root.black {
+    --text-color: white;
+    --bkg-color: black;
+}
+app-root{
+    background-color: var(--bkg-color);
+    color: var(--text-color);
+}

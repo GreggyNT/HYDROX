@@ -1,0 +1,41 @@
+img{
+    margin-top: 20%;
+height: 13vw;
+}
+h1{ 
+    width: 1000%;
+    font-size: 2.8vw;
+    font-weight: bold;
+}
+h2{
+    width: 800%;
+    font-size:1.3vw ;
+    font-weight: 100;
+    margin-top: 8vh;
+    color:black;
+}
+.background2{
+    --back-color:url("../../assets/back/back_w.png");
+}
+
+.background2.black{
+    --back-color: url("../../assets/back/back_d.png")
+}
+.background2{
+    position: absolute;
+    left: 0;
+    top:45vh;
+    background-image: var(--back-color);
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Optional: Adjust text color for better visibility */
+    text-align: center; /* Optional: Center the text */
+    height: 300vh;
+    width:100%;
+    z-index: -1;
+
+}

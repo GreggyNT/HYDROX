@@ -1,0 +1,21 @@
+.example-card {
+    max-width: 400px;
+    border-width: 1px;
+    margin-top: 100px;
+  }
+
+  
+img {
+    pointer-events: none;
+}
+
+.example-card:hover img {
+    opacity: 0.8;
+}
+
+.for-container{
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+}

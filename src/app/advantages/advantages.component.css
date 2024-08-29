@@ -1,0 +1,100 @@
+.advantages-container::before,
+.advantages-container::after {
+    content: '';
+    position: absolute;
+    top: 75vh;
+    width: 40vw; /* Adjust the length of the lines */
+    height: 1px; /* Adjust the thickness of the lines */
+    background-color: #000; /* Adjust the color of the lines */
+}
+.advantages-container::before{
+    left: 0;
+    transform: translateY(-50%);
+}
+.advantages-container::after {
+    right: 0;
+    transform: translateY(-50%);
+}
+.advantages{
+    display:flex;
+    justify-content: center;
+    font-size: 1.8vw;
+
+}
+.icons{
+    display: flex;
+    margin-top: 7vh;
+    justify-content: space-around;
+    margin-left:11vw;
+    margin-right: 11vW;
+}
+.icon-img{
+    height: 6vh;
+}
+.captions{
+    margin-left:9vw;
+    margin-right: 11vW;
+    margin-bottom: 7vh;
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+}
+.caption{
+    text-align: center;
+    width: 10vw;;
+    font-size: 1vw;
+    font-weight: 100;
+}
+
+.production{
+    font-size: 1.6vw;
+    width: 33%;
+    line-height: 4.5vh;
+}
+.usage{
+    display: flex;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 7vh;
+}
+
+.text-container {
+    align-items: center;
+    position: relative;
+    font-size: 2vh;
+    justify-self: space-around;
+    padding: 0 10px; /* Space between lines and text */
+    margin-bottom:7vh;
+}
+.text-container::before,
+.text-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 11vw; /* Length of the line */
+    height: 1px; /* Thickness of the line */
+    background-color: black; /* Color of the line */
+    transform: translateY(-50%);
+}
+.text-container::before {
+    left: 0;
+}
+.text-container::after {
+    right: 0;
+}
+.word {
+    margin-right: 10px; /* Space between words */
+}
+.word:first-child{
+    margin-left:11vw
+}
+.word:not(:last-child)::after {
+    content: '';
+    display: inline-block;
+    width: 100px; /* Length of the line */
+    height: 1px; /* Thickness of the line */
+    background-color: black; /* Color of the line */
+    margin-left: 9px; /* Space between word and line */
+    vertical-align: middle;
+}

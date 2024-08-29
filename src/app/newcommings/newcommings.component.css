@@ -1,0 +1,24 @@
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 1.6vw;
+    color:black;
+    font-weight: 100;
+    margin-bottom: 7vh;
+}
+.models-container img {
+    height: 50vh;
+}
+.models-container{
+    display: flex;
+    justify-content: space-around;
+    margin-left:6vw;
+    margin-right:8vw;
+}
+.center{
+    margin-top: 20vh;
+
+}
+.right{
+    margin-top: 5vh;
+}
