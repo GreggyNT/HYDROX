@@ -14,17 +14,11 @@ h2{
     margin-top: 8vh;
     color:black;
 }
-.background2{
-    --back-color:url("../../assets/back/back_w.png");
-}
 
-.background2.black{
-    --back-color: url("../../assets/back/back_d.png")
-}
 .background2{
     position: absolute;
-    left: 0;
-    top:45vh;
+    left:0;
+    top:6.6vh;
     background-image: var(--back-color);
     background-size: cover; /* Ensures the image covers the entire container */
     background-position: center; /* Centers the image */

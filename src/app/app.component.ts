@@ -9,12 +9,13 @@ import { Subscription } from 'rxjs';
 import { ThemeCheckerService } from './theme-checker.service';
 import { BrowserAnimationsModule} from  '@angular/platform-browser/animations';
 import { fadeAnimation } from './animations/routeAnimations';
+import { TextGridComponent } from './text-grid/text-grid.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent,BodyComponent,CubeComponent,RouterLink,RouterLinkActive],
+  imports: [RouterOutlet, HeaderComponent,BodyComponent,CubeComponent,RouterLink,RouterLinkActive,TextGridComponent],
   animations:[fadeAnimation],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -40,6 +41,7 @@ export class AppComponent implements OnInit {
   toggleDarkTheme(): void {
 
     this.themeChecker.themeToggled.next(!this.themeChecker.themeToggled.getValue());
+    var elements =  document.body.getElementsByTagName("app-root");
     document.body.getElementsByTagName("app-root").item(0)?.classList.toggle("black");
     document.body.getElementsByClassName("buttons-container").item(0)?.classList.toggle("black");
     document.body.getElementsByClassName("background").item(0)?.classList.toggle("black");
@@ -67,4 +69,9 @@ export class AppComponent implements OnInit {
       }
     }
  }
+
+ logoSrc:string;
+ static logoW =  "../../assets/logo/Logo-big.png";
+ static logoD =  "../../assets/logo/Logo-neon.png";
+ 
 }

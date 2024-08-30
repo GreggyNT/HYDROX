@@ -1,6 +1,8 @@
 .logoContainer{
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    animation: none !important;
+    transition: none !important;
 }
 app-text-grid{
     height: auto;
@@ -19,6 +21,8 @@ app-text-grid{
     height: 45vh;
     background:var(--bck-color) ;
     z-index: -1;;
+    animation: none !important;
+    transition: none !important;
 }
 .background{
     --bck-color: linear-gradient(7deg, rgba(255,231,101,1) 5%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%);

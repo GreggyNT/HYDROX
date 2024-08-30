@@ -1,5 +1,6 @@
 <img [src]="lightSrc"  (click)="toggleDarkTheme()" alt="" class="changeTheme">
 <app-header [lupaSrc]="lupaSrc" [cartSrc]="cartSrc"></app-header>     
-<div style="position: relative;" [@fadeAnimation]="prepareRoute(outlet)">                                          
+<div style="position: relative;" [@fadeAnimation]="prepareRoute(outlet)">   
+                                      
 <router-outlet #outlet="outlet" (activate)="onOutletLoaded($event) "></router-outlet>
 </div>
