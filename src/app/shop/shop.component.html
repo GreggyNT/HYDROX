@@ -1,0 +1,11 @@
+<app-filter></app-filter>
+<h1 class="call-title">Не нашли что искали?</h1>
+<div class="call-container" [ngStyle]="{'background-image':'../../assets/back/back_w.png'}">
+<button class="call-button" [@callAnimation]="animationState" (click)="trigerWindowAnimation()">заказать звонок</button>
+</div>
+<app-shop-type [isPictLeft]="true" [title]="title1" [imageSrc]="imgSrc1" class="first" ></app-shop-type>   
+<app-shop-type [isPictLeft]="false" [title]="title2" [imageSrc]="imgSrc2" class="second"></app-shop-type>   
+<app-shop-type [isPictLeft]="true" [title]="title3" [imageSrc]="imgSrc3" class="third"></app-shop-type>   
+<app-shop-type [isPictLeft]="false" [title]="title4" [imageSrc]="imgSrc4" class="fourth"></app-shop-type>   
+<app-shop-type [isPictLeft]="true" [title]="title5" [imageSrc]="imgSrc5" class="fifth"></app-shop-type>   
+<app-shop-type [isPictLeft]="false" [title]="title6" [imageSrc]="imgSrc6" class="sixth"></app-shop-type>   

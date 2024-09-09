@@ -1,0 +1,11 @@
+<div class="container">
+    <div *ngIf="isPictLeft; then LeftBlock else RightBlock"></div>
+</div>
+    <ng-template #LeftBlock>
+        <img [ngSrc] = "imageSrc" width="100" height="100" class="picture"  >
+        <h1 class="title">{{title}}</h1>  
+    </ng-template>
+    <ng-template #RightBlock>
+        <h1 class="title">{{title}}</h1>
+        <img [ngSrc] = "imageSrc" width="100" height="100" class="picture">
+    </ng-template>

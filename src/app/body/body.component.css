@@ -1,35 +1,3 @@
-.logoContainer{
-    display: flex;
-    justify-content: space-between;
-    animation: none !important;
-    transition: none !important;
-}
-app-text-grid{
-    height: auto;
-    width: 5%;
-    margin-left: 11.1%;
-}
-
-.main{
-    height: 73vh;
-    width: auto;
-    margin-right: 8%;
-}
-.background{
-    position: absolute;
-    width: 100%;
-    height: 45vh;
-    background:var(--bck-color) ;
-    z-index: -1;;
-    animation: none !important;
-    transition: none !important;
-}
-.background{
-    --bck-color: linear-gradient(7deg, rgba(255,231,101,1) 5%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%);
-}
-.background.black{
-    --bck-color:black;
-}
 
 app-advantages{
     color: black;

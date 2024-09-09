@@ -16,7 +16,7 @@ h2{
     justify-content: center;
     margin-bottom: 7vh;
 }
-.text-container {
+.text-container2 {
     align-items: center;
     position: relative;
     font-size: 2vh;
@@ -25,24 +25,30 @@ h2{
     margin-bottom:11vh;
 
 }
-.text-container::before,
-.text-container::after {
+.text-container2{
+    --v-back-color:white;
+}
+.text-container2.black{
+    --v-back-color:black;
+}
+.text-container2::before,
+.text-container2::after {
     content: '';
     position: absolute;
     top: 50%;
     width: 13vw; /* Length of the line */
     height: 1px; /* Thickness of the line */
-    background-color: black ;/* Color of the line */
+    background-color:  var(--v-back-color) ;/* Color of the line */
     transform: translateY(-50%);
 }
-.text-container::before {
+.text-container2::before {
     left: 0;
 }
-.text-container::after {
+.text-container2::after {
     right: 0;
 }
 .word {
-    margin-right: 10px; /* Space between words */
+    margin-right: 10px; 
 }
 .word:first-child{
     margin-left:13.5vw
@@ -50,9 +56,9 @@ h2{
 .word:not(:last-child)::after {
     content: '';
     display: inline-block;
-    width: 100px; /* Length of the line */
-    height: 1px; /* Thickness of the line */
-    background-color:black; /* Color of the line */
-    margin-left: 9px; /* Space between word and line */
+    width: 100px; 
+    height: 1px; 
+    background-color: var(--v-back-color); 
+    margin-left: 9px; 
     vertical-align: middle;
 }

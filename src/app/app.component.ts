@@ -4,18 +4,17 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { BodyComponent } from './body/body.component';
 import { OnInit } from '@angular/core';
-import { ContactsComponent } from './contacts/contacts.component';
 import { Subscription } from 'rxjs';
 import { ThemeCheckerService } from './theme-checker.service';
-import { BrowserAnimationsModule} from  '@angular/platform-browser/animations';
 import { fadeAnimation } from './animations/routeAnimations';
 import { TextGridComponent } from './text-grid/text-grid.component';
+import { UnderHeaderComponent } from './under-header/under-header.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent,BodyComponent,CubeComponent,RouterLink,RouterLinkActive,TextGridComponent],
+  imports: [RouterOutlet, HeaderComponent,BodyComponent,CubeComponent,RouterLink,RouterLinkActive,TextGridComponent,UnderHeaderComponent],
   animations:[fadeAnimation],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -30,8 +29,10 @@ export class AppComponent implements OnInit {
   }
   themeToggleSubscription: Subscription;
   ngOnInit(): void {
-    this.themeChecker.themeToggled.next(true);
+    this.themeChecker.themeToggled.next((window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches));
     this.toggleDarkTheme();
+    
   }
   title = 'HYDROX';
   lupaSrc :string;
@@ -46,6 +47,7 @@ export class AppComponent implements OnInit {
     document.body.getElementsByClassName("buttons-container").item(0)?.classList.toggle("black");
     document.body.getElementsByClassName("background").item(0)?.classList.toggle("black");
     document.body.getElementsByClassName("background2").item(0)?.classList.toggle("black");
+    document.body.getElementsByClassName("text-container2").item(0)?.classList.toggle("black");
 
     if(this.themeChecker.themeToggled.getValue()){
       this.lupaSrc = "../../assets/icons/Search.png";
@@ -60,15 +62,6 @@ export class AppComponent implements OnInit {
 
  }
 
- onOutletLoaded(component:BodyComponent|ContactsComponent){
-    if (component instanceof BodyComponent){
-      if(!this.themeChecker.themeToggled.getValue())
-      {
-        document.body.getElementsByClassName("background").item(0)?.classList.toggle("black");
-        document.body.getElementsByClassName("background2").item(0)?.classList.toggle("black");
-      }
-    }
- }
 
  logoSrc:string;
  static logoW =  "../../assets/logo/Logo-big.png";

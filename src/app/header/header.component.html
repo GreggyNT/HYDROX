@@ -1,27 +1,27 @@
 <div class="buttons-container">
-<header>
-    <ul class="buttons"> 
-        <li class="homeButton">
-            <a routerLink="/" routerLinkActive="active">главная</a>
-        </li>
-        <li class="shopButton">
-            <a href="#" >магазин</a>   
-        </li>
-        <li class="catalogButton">
-            <a href="#" >каталог</a>
-        </li>
-        <li class="contactButton">
-            <a routerLink="/contacts" routerLinkActive="active">контакты</a>   
-        </li>
-        <li class="lupaPin">
-            <img [src]="lupaSrc" alt="">
-        </li>
-        <li class="shopPin">
-            <img [src]="cartSrc" alt="">
-        </li>
-        <li class="currency">
-            <a href="">{{currency}}</a>
-        </li>
+  <header>
+    <ul [@headerAnimation]="getRouteAnimationData()" class="buttons">
+      <li class="homeButton">
+        <a routerLink="/" >главная</a>
+      </li>
+      <li class="shopButton">
+        <a routerLink="/shop" routerLinkActive="active"   >магазин</a>
+      </li>
+      <li class="catalogButton">
+        <a href="">каталог</a>
+      </li>
+      <li class="contactButton" >
+        <a routerLink="/contacts" routerLinkActive="active" >контакты</a>
+      </li>
+      <li class="lupaPin">
+        <img [src]="lupaSrc" alt="" />
+      </li>
+      <li class="shopPin">
+        <img [src]="cartSrc" alt="" />
+      </li>
+      <li class="currency">
+        <a href="">{{ currency }}</a>
+      </li>
     </ul>
-</header>
+  </header>
 </div>

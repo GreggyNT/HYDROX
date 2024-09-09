@@ -18,8 +18,7 @@ import { Subscription } from 'rxjs';
   styleUrl: './body.component.css'
 })
 export class BodyComponent implements OnInit {
-  static logoW =  "../../assets/logo/Logo-big.png";
-  static logoD =  "../../assets/logo/Logo-neon.png";
+
   static leftModelW = "../../assets/models/left_model_w.png";
   static centerModelW = "../../assets/models/center_model_w.png";
   static rightModelW = "../../assets/models/right_model_w.png";
@@ -41,12 +40,10 @@ ngOnInit(): void
 {
   this.sub = this.themeCheckerService.themeToggled.subscribe(theme => {
     if (theme) {
-      this.logoSrc =BodyComponent.logoW;
       this.leftModelSrc =BodyComponent.leftModelW;
       this.centerModelSrc =BodyComponent.centerModelW;
       this.rightModelSrc = BodyComponent.rightModelW;
     } else {
-      this.logoSrc =BodyComponent.logoD;
       this.leftModelSrc =BodyComponent.leftModelD;
       this.centerModelSrc =BodyComponent.centerModelD;
       this.rightModelSrc = BodyComponent.rightModelD;

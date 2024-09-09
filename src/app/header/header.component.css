@@ -19,6 +19,7 @@ ul{
 }
 .buttons-container{
     background-color: var(--back-color);
+    transition: all 0.4s ease-in;
 }
 ul li a{
     color:var(--text-color);
@@ -53,4 +54,7 @@ a:hover{
 }
 .currency{
     margin-right: 13%;
+}
+.active{
+    color:#bf0404 !important;
 }

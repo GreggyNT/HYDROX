@@ -1,0 +1,65 @@
+h1{
+    display: flex;
+    font-weight: 100;
+    justify-content: center;
+    margin-top: 5vh;
+}
+.call-container{
+    display: flex;
+    justify-content: center;
+    will-change: transform;
+}
+.call-button{
+    font-size: 2vh;
+    padding-left:1vw;
+    padding-right:1vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+}
+.call-container::before,
+.call-container::after {
+  position: absolute;
+  height: 3.3vh;
+  width: 9vw;
+  content: "";
+}
+.call-container::before {
+    left: 44vw;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.call-container::after {
+    
+    right: 44vw;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+.first{
+    position: relative;
+    z-index:1;
+}
+.second{
+    position: relative;
+    z-index: 2;
+}
+.third{
+    position: relative;
+    z-index:3;
+}
+.fourth{
+    position: relative;
+    z-index: 4;
+}
+.fifth{
+    position: relative;
+    z-index:5;
+}
+.sixth{
+    position: relative;
+    z-index: 6;
+}
+.call-container{
+    margin-bottom: 2vh;
+}

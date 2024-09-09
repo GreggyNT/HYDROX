@@ -1,0 +1,49 @@
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    top: 1.8vh;/* Length of the line */
+    height: 1px; /* Thickness of the line */
+    background-color: black; /* Color of the line */
+}
+.container{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 14vw;
+}
+.filter-button{
+    font-size: 2vh;
+    padding-left:1vw;
+    padding-right:1vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+}
+.filter-button::before,
+.filter-button::after {
+  position: absolute;
+  height: 3.3vh;
+  width: 4vw;
+  content: "";
+}
+.filter-button::before {
+    left: 80.2%;
+    top: 0;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.filter-button::after {
+    right: 14.2%;
+    top:0;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+.container::before{
+    left:0;
+    width: 80.2%;
+}
+.container::after {
+    right: 0;
+    width:14.2%;
+}

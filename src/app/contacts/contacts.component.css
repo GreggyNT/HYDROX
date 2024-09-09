@@ -1,0 +1,28 @@
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+.contacts-container{
+    color:black;
+    margin-left:8vw;
+}
+.title{
+    font-weight: light;
+    font-size: 1.6vmax;
+}
+.content{
+    font-size: 1.15vmax;
+}
+.telephone-container .content{
+    text-decoration: underline;
+}
+.dep1desc, .dep2desc{
+    text-decoration: underline;
+}
+.adress-container .content{
+    width:30vw;
+}
+.contacts-page{
+    display:flex;
+    justify-content: space-around;
+}

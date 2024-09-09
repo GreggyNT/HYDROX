@@ -1,0 +1,29 @@
+.background{
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    background:var(--bck-color) ;
+    z-index: -100;
+    transition: all 0.7s;
+  }
+  .background{
+    --bck-color: linear-gradient(7deg, rgba(255,231,101,1) 5%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%);
+  }
+  .background.black{
+    --bck-color:black;
+  }
+  .logoContainer{
+    display: flex;
+    justify-content: space-between;
+  }
+app-text-grid{
+    height: auto;
+    width: 5%;
+    margin-left: 11.1%;
+}
+
+.main{
+    width: auto;
+    margin-right: 8%;
+    height: 73vh;
+}

@@ -10,6 +10,9 @@ body{
     width: 100%;
 
 }
+.active{
+    color: #bf0404 !important;
+}
 
 a{
     text-decoration: none;
