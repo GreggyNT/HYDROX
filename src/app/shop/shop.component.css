@@ -58,7 +58,8 @@ h1{
 }
 .sixth{
     position: relative;
-    z-index: 6;
+    z-index:6;
+    
 }
 .call-container{
     margin-bottom: 2vh;

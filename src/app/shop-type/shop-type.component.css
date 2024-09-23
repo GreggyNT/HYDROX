@@ -5,12 +5,18 @@
 .container{
     display: flex;
     justify-content: center;
-    margin-bottom: -15vh;
+    margin-bottom: -20vh;
 }
 .title{
     width:20vw;
     font-size: 2vw;
     margin-top:12vh;
     color:black
+}
+.back{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
 }
 

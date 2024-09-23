@@ -17,6 +17,8 @@ import { fade } from '../animations/backFadeAnimation';
 })
 export class TextGridComponent {
   @Input() logoSrc:string;
+  @Input() backSrc_w:string ;
+  @Input() backSrc_d:string ;
   backSrc:string;
   constructor(private themeChecker:ThemeCheckerService,private contexts:ChildrenOutletContexts){}
   sub:Subscription;
